@@ -1,2 +1,2 @@
-# gzqyl.github.io
-static website
+# for wechat mini-program
+static site
