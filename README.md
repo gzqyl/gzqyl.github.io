@@ -1,3 +1,3 @@
 # 苹果手机找回删除的微信好友
 # 苹果手机找回删除的微信聊天记录
-![Image](./assets/images/qrcode.png)
+- 苹果用户非常推荐采用APP自己完成数据恢复！[飞燕数据恢复](https://apps.apple.com/cn/app/%E9%A3%9E%E7%87%95%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/id1485888820)
