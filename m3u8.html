@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <title>Streaming Media Mode Test Page</title>
+    <link rel="icon" href="/assets/icons/fav.png" type="image/png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="/assets/css/animate.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/css/owl.theme.css">
+    <link href="/assets/css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  </head>
+  <body class="boxed-layout">
+
+    <div class="wrapper container" style="margin-top:100px;">
+
+        <p class="article-pragrah" style="display:flex; flex-direction:row; justify-content:center;">
+            <video
+                id="mvideo"
+                class="video-js"
+                preload="auto"
+                width="640"
+                height="264"
+                data-setup="{}"
+            >
+            </video>
+        </p>
+
+        <p class="article-pragrah" style="display:flex; flex-direction:row; justify-content:center;margin-top:15px;">
+            <button class="btn btn-primary" onclick="testPlayer()">
+                点击播放
+            </button>
+        </p>
+
+        <p class="article-pragrah" style="display:flex; flex-direction:row; justify-content:center;margin-top:15px; line-height: 20px;">
+            Notes: if streaming media mode turned off (default status), user could play the video by webview (it may use native video player or not which controlled by website developer),
+            but if streaming media mode turned on, once the app found m3u8 url request, it will play the m3u8 link by native video player always.
+        </p>
+
+        <p class="article-pragrah text-danger" style="display:flex; flex-direction:row; justify-content:center;margin-top:15px; line-height: 20px;">
+            You could find the difference when mode is on, click the button to play will be forced to use native player with a modal view.
+        </p>
+     
+    </div>
+
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script>
+        function testPlayer(){
+
+            const myPlayer = videojs('mvideo');
+            myPlayer.src({type: 'application/x-mpegURL', src: 'https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/v3/prog_index.m3u8'});
+            myPlayer.ready(function() {
+                myPlayer.play()
+            });
+        }
+    </script>
+
+    <!-- Jquery and Js Plugins -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
