@@ -40,7 +40,12 @@
         </p>
 
         <p class="article-pragrah" style="display:flex; flex-direction:row; justify-content:center;margin-top:15px; line-height: 20px;">
-            Notes: Currently, the difference between WKWebView Video Player and app native video player is very little, but you could still find some differences, such as the UI View is different when the mode is on.
+            When the streaming media mode is on, users could play m3u8 url link start from the last time position, when the mode is off, users will use webkit video player which always starts from
+            time 0:00. we called it funny web player or "H5网页浏览播放器" as we customized somthing based on AVPlayer, though the customizations is very little currently.
+        </p>
+
+        <p class="article-pragrah" style="display:flex; flex-direction:row; justify-content:center;margin-top:15px; line-height: 20px;">
+            The only reason why we add this feature is that we want to let the users have better experience when play m3u8 url link.
         </p>
      
     </div>
